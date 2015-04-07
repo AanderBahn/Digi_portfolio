@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "/"
+
   get 'blog/new'
 
   get 'blog/create'
