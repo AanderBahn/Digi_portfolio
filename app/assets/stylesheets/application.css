@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.home_pic img {
+  width: 250px;
+  height: 300px;
+}
+
+.center, .jumbotron {
+}
+
+.top-lefter {
+ display: inline-block;
+ margin-right: 5px;
+}
+
+.top-righter {
+  display: inline-block;
+  margin-left: 5px;
+}

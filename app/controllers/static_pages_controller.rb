@@ -1,9 +1,4 @@
 class StaticPagesController < ApplicationController
-  def new
-  end
-
-  def create
-  end
 
   def update
   end
@@ -11,12 +6,16 @@ class StaticPagesController < ApplicationController
   def edit
   end
 
-  def destroy
+  def home
   end
 
-  def index
+  def about
   end
 
-  def show
+  def contact
   end
+
+  def admin
+  end
+
 end
