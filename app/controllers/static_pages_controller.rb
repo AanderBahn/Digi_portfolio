@@ -1,11 +1,5 @@
 class StaticPagesController < ApplicationController
 
-  def update
-  end
-
-  def edit
-  end
-
   def home
   end
 

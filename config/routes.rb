@@ -3,54 +3,27 @@ Rails.application.routes.draw do
   #root "/"
   root to: 'static_pages#home', as: :landing
 
-  get 'blog/new'
-
-  get 'blog/create'
-
-  get 'blog/update'
-
-  get 'blog/edit'
-
-  get 'blog/destroy'
-
-  get 'blog/index'
-
-  get 'blog/show'
+  #Blog
+  resources :blogs
 
   get 'portfolio/new'
-
   get 'portfolio/create'
-
   get 'portfolio/update'
-
   get 'portfolio/edit'
-
   get 'portfolio/destroy'
-
   get 'portfolio/index'
-
   get 'portfolio/show'
 
   get 'static_pages/new'
-
   get 'static_pages/create'
-
   get 'static_pages/update'
-
   get 'static_pages/edit'
-
   get 'static_pages/destroy'
-
   get 'static_pages/index'
-
   get 'static_pages/show'
-
   get 'static_pages/home'
-
   get 'static_pages/about'
-
   get 'static_pages/contact'
-
   get 'static_pages/admin'
 
   # The priority is based upon order of creation: first created -> highest priority.

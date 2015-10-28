@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.greenout {
+ background-color: #006E37;
+ color: #006E37;
+}
 
 .home_pic img {
   width: 250px;
@@ -24,6 +28,11 @@
 }
 
 .center, .jumbotron {
+ background-color: #3385FF;
+}
+
+.jumbotron h1 {
+ color: #006E37;
 }
 
 .top-lefter {
@@ -34,4 +43,23 @@
 .top-righter {
   display: inline-block;
   margin-left: 5px;
+}
+
+/* portfilio */
+
+/* blog */
+
+.blogTop p {
+ text-align: center;
+ margin: auto;
+}
+
+.blogList {
+ margin: auto;
+}
+
+/* blog - new */
+
+.panel-default {
+  background-color: #3385FF;
 }
