@@ -1,14 +1,21 @@
-<p>
- <strong>Title:</strong>
- <%= @blog.title %>
-</p>
+<header>
+    <nav class="main-nav">
+     <h1 class="screen-title col-md-6 col-md-offset-3"><%= @blog.title %></h1>
+    </nav>
+  </header>
 
-<p>
- <strong>Headline:</strong>
- <%= @blog.headline %>
-</p>
-
-<p>
- <strong>Text:</strong>
- <%= @blog.blogBody %>
-</p>
+<main>
+<div class="col-md-6 col-md-offset-3 isotope-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+      </div>
+      <div class="panel-body">
+        <dl>
+          <h3><%= @blog.headline %></h3>
+          <br>
+          <dt>Article</dt>
+          <dd class="shower"><%= @blog.blogBody %></dd>
+          <br>
+        </dl>
+</main>

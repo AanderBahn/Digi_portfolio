@@ -1,7 +1,15 @@
 <div class="blogTop">
  <h1>Triskell Blog</h1>
- <p>Here at Triskell Works there is always much going on.</p>
 </div>
+
+<% if @blog.count < 1 %>
+ <a class="btn btn-success" href="/blogs/new">Add New Blog</a>
+ <div class="spacer-mic"></div>
+<% end %>
+
+<% if @blog.count < 1 %>
+ <h3>Things are very busy at Triskell Works, but stay tuned. We'll have some updates coming your way soon!</h3>
+<% end %>
 
 <div class="blogList">
 <% @blog.each do |blog| %>
@@ -14,10 +22,10 @@
           </div>
 
        <div class="panel-body">
-        <dt>Make & Model</dt>
+        <dt>Title</dt>
         <dd class="shower"><%= blog.title %></dd>
         <br>
-        <dt>Year</dt>
+        <dt>Headline</dt>
         <dd class="shower"><%= blog.headline %></dd>
         <br>
 
