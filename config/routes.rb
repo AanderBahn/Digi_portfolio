@@ -6,13 +6,16 @@ Rails.application.routes.draw do
   #Blog
   resources :blogs
 
-  get 'portfolio/new'
+  #Portfolio
+  resources :portfolios
+
+  #get 'portfolio/new'
   get 'portfolio/create'
   get 'portfolio/update'
-  get 'portfolio/edit'
-  get 'portfolio/destroy'
-  get 'portfolio/index'
-  get 'portfolio/show'
+  #get 'portfolio/edit'
+  #get 'portfolio/destroy'
+  #get 'portfolio/index'
+  #get 'portfolio/show'
 
   get 'static_pages/new'
   get 'static_pages/create'

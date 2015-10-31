@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-    @blog = Blog.all
+   @blog = Blog.all
 
    #respond_to do |format|
       #format.html # index.html.erb
