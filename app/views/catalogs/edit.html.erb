@@ -1,0 +1,59 @@
+<header>
+    <nav class="main-nav">
+     <h1 class="screen-title col-md-6 col-md-offset-5">Edit Entry</h1>
+    </nav>
+  </header>
+
+<% if @catalog.errors.any? %>
+  <% @catalog.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<main>
+<div class="col-md-6 col-md-offset-3 isotope-item">
+<div class="panel panel-default">
+<div class="panel-heading">
+</div>
+<div class="panel-body">
+<%= form_for @catalog, :html => { :class => "form-horizontal" } do |f| %>
+
+  <!-- Label and input for name -->
+  <div class="form-group">
+    <%= f.label :edit_catalog_name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, placeholder: "Name of the Entry", class: "form-control" %>
+    </div>
+  </div>
+  <br>
+
+  <!-- Label and input for bio -->
+  <div class="form-group ">
+   <%= f.label :category, class: "col-sm-2 control-label" %>
+   <div class="col-sm-10">
+   <%= f.select :category, [['Historical','historical'],['Theatrical','theatrical'],['Modern','Modern']]%>
+   </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :description, placeholder: "It is,what it is.", class: "form-control" %>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group text-center">
+    <div class="col-sm-offset-1 col-sm-10">
+      <%= f.submit class: "btn btn-success" %>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<% end %>
+</main>

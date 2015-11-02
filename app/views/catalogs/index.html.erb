@@ -1,0 +1,40 @@
+<% if @catalog.count < 1 %>
+ <a class="btn btn-success" href="/catalogs/new">Add something</a>
+ <div class="spacer-mic"></div>
+<% end %>
+
+<% if @catalog.count < 1 %>
+ <h3>Things are very busy at Triskell Works, but stay tuned. We'll have some updates coming your way soon!</h3>
+<% end %>
+
+<div class="blogList">
+<% @catalog.each do |catalog| %>
+
+       <dl>
+         <div class="col-md-4 panel-body">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title"></h3>
+          </div>
+
+       <div class="panel-body">
+        <dt>Title</dt>
+        <dd class="shower"><%= catalog.name %></dd>
+        <br>
+        <dt>Headline</dt>
+        <dd class="shower"><%= catalog.category %></dd>
+        <br>
+
+         <div class="text-center">
+          <div class="btn-group btn-group-lg" role="group">
+          <td><%= link_to 'Show', "/catalogs/#{catalog.id}", :class => 'btn btn-info btn-group btn-group-xs' %></td>
+          <td><%= link_to 'Edit', "/catalogs/#{catalog.id}/edit", :class => 'btn btn-warning btn-group btn-group-xs' %></td>
+          <td><%= link_to 'Delete', "/catalogs/#{catalog.id}", method: :delete, :class => 'btn btn-danger btn-group btn-group-xs' %></td>
+           </div>
+          </div>
+          </div>
+         </div>
+        </div>
+       </dl>
+  <% end %>
+</div>

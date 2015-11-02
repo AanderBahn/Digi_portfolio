@@ -1,0 +1,21 @@
+<header>
+    <nav class="main-nav">
+     <h1 class="screen-title col-md-6 col-md-offset-3"><%= @catalog.name %></h1>
+    </nav>
+  </header>
+
+<main>
+<div class="col-md-6 col-md-offset-3 isotope-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+      </div>
+      <div class="panel-body">
+        <dl>
+          <h3><%= @catalog.category %></h3>
+          <br>
+          <dt>Description</dt>
+          <dd class="shower"><%= @catalog.description %></dd>
+          <br>
+        </dl>
+</main>

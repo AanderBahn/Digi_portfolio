@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   #root "/"
   root to: 'static_pages#home', as: :landing
 
@@ -9,13 +8,7 @@ Rails.application.routes.draw do
   #Portfolio
   resources :portfolios
 
-  #get 'portfolio/new'
-  get 'portfolio/create'
-  get 'portfolio/update'
-  #get 'portfolio/edit'
-  #get 'portfolio/destroy'
-  #get 'portfolio/index'
-  #get 'portfolio/show'
+  resources :catalogs
 
   get 'static_pages/new'
   get 'static_pages/create'
