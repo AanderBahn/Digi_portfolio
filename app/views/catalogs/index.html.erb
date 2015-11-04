@@ -1,7 +1,6 @@
-<% if @catalog.count < 1 %>
+
  <a class="btn btn-success" href="/catalogs/new">Add something</a>
  <div class="spacer-mic"></div>
-<% end %>
 
 <% if @catalog.count < 1 %>
  <h3>Things are very busy at Triskell Works, but stay tuned. We'll have some updates coming your way soon!</h3>
@@ -21,8 +20,8 @@
         <dt>Title</dt>
         <dd class="shower"><%= catalog.name %></dd>
         <br>
-        <dt>Headline</dt>
-        <dd class="shower"><%= catalog.category %></dd>
+        <dt><%= catalog.category %></dt>
+
         <br>
 
          <div class="text-center">
